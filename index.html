@@ -223,7 +223,7 @@
  */
 const SCHOOLS = [
   { name: "奶龙交通大学", real: "西安交通大学", domain: "奶龙交通大学.com", category: "陕西省", status: "ok" },
-  { name: "上海奶龙大学", real: "同济大学", domain: "上海奶龙大学.com", category: "上海市", status: "ok" },
+  { name: "上海奶龙大学", real: "同济大学", domain: "上海奶龙大学.com", category: "上海市", status: "ok", http: "http" },
   { name: "世界奶龙大学", real: "大连理工大学", domain: "世界奶龙大学.com", category: "辽宁省", status: "ok" },
   { name: "中国奶龙大学", real: "大连理工大学", domain: "中国奶龙大学.com", category: "辽宁省", status: "ok" },
   { name: "北京奶龙大学", real: "北京工业大学", domain: "北京奶龙大学.com", category: "北京市", status: "ok" },
@@ -278,7 +278,7 @@ const SCHOOLS = [
 
   
   { name: "美利坚合众国奶蛙大学", real: "密歇根大学安娜堡分校", domain: "美利坚合众国奶蛙大学.com", category: "美国", status: "ok" },
-  { name: "美国奶龙大学", real: "威斯康星大学麦迪逊分校", domain: "美国奶龙大学.com", category: "美国", status: "ok" },
+  { name: "美国奶龙大学", real: "威斯康星大学麦迪逊分校", domain: "美国奶龙大学.com", category: "美国", status: "ok", http: "http" },
   
 ];
 
@@ -309,7 +309,11 @@ function showToast(msg) {
 function buildUrl(school) {
   if (school.url) return school.url;
   if (!school.domain) return "";
-  return "http://" + school.domain;
+  if (school.http === "http"){
+    return "http://" + school.domain;
+  }else{
+    return "https://" + school.domain;
+  }
 }
 
 function openSchool(school) {

@@ -223,7 +223,7 @@
  */
 const SCHOOLS = [
   { name: "奶龙交通大学", real: "西安交通大学", domain: "奶龙交通大学.com", category: "陕西省", status: "ok" },
-  { name: "上海奶龙大学", real: "同济大学", domain: "上海奶龙大学.com", category: "上海市", status: "ok" },
+  { name: "上海奶龙大学", real: "同济大学", domain: "上海奶龙大学.com", category: "上海市", status: "warn" },
   { name: "世界奶龙大学", real: "大连理工大学", domain: "世界奶龙大学.com", category: "辽宁省", status: "ok" },
   { name: "中国奶龙大学", real: "大连理工大学", domain: "中国奶龙大学.com", category: "辽宁省", status: "ok" },
   { name: "北京奶龙大学", real: "北京工业大学", domain: "北京奶龙大学.com", category: "北京市", status: "ok" },
@@ -281,9 +281,9 @@ const SCHOOLS = [
 ];
 
 const STATUS_LABEL = {
-  ok: "已验证",
-  warn: "占位",
-  unknown: "待查"
+  ok: "奶龙认证",
+  warn: "不可用",
+  unknown: "未验证"
 };
 
 const grid = document.getElementById("grid");

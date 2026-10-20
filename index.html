@@ -309,7 +309,7 @@ function showToast(msg) {
 function buildUrl(school) {
   if (school.url) return school.url;
   if (!school.domain) return "";
-  return "https://" + school.domain;
+  return "//" + school.domain;
 }
 
 function openSchool(school) {

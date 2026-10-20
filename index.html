@@ -365,7 +365,7 @@ function render() {
 
     const hint = clickable
       ? "点击访问 →"
-      : (s.status === "warn" ? "此校址占位中" : "此校址待查，暂不可跳转");
+      : (s.status === "warn" ? "此网址暂时不可用" : "此校址待查，暂不可跳转");
 
     card.innerHTML = `
       <h3>${s.name}<span class="tag ${s.status}">${STATUS_LABEL[s.status] || s.status}</span></h3>
